@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173` to play.
+Open `https://tic-tac-toe-game-gamma-five.vercel.app/` to play.
 
 ## How to Play
 
