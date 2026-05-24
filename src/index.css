@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-deep: #050a18;
+  --bg-card: #0b1628;
+  --bg-cell: #0d1f3c;
+  --x-color: #00e5ff;
+  --x-glow: rgba(0, 229, 255, 0.4);
+  --o-color: #ff4d6d;
+  --o-glow: rgba(255, 77, 109, 0.4);
+  --neutral: #4a6fa5;
+  --win-highlight: rgba(255, 215, 60, 0.15);
+  --text-primary: #e8f4fd;
+  --text-dim: #4a6fa5;
+  --border: rgba(74, 111, 165, 0.3);
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--bg-deep);
+  font-family: 'Rajdhani', sans-serif;
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Animated starfield background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(0,229,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 60%, rgba(255,77,109,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 50% 10%, rgba(0,229,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 80%, rgba(255,77,109,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 35%, rgba(0,229,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 85%, rgba(255,77,109,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 45%, rgba(0,229,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 90%, rgba(255,77,109,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 65%, rgba(0,229,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, rgba(255,77,109,0.4) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(0, 229, 255, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 50%, rgba(255, 77, 109, 0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
